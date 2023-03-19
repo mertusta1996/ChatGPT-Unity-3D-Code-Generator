@@ -5,7 +5,7 @@ This repo is a "ChatGPT-Unity 3D Code Generator" application is working with Uni
 
 ## Usage
  
-- Creates and Saves a new Unity3D script, with ChatGPT AI's power in UnityEditor. (for the code instruction descripted, with the name descripted)
+- Creates and Saves a new Unity3D script, with ChatGPT AI's power in UnityEditor. (for the descripted code instruction, with the descripted code name)
 
 
 
