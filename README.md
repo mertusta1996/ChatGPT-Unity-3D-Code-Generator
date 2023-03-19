@@ -5,7 +5,7 @@ This repo is a "ChatGPT-Unity 3D Code Generator" application is working with Uni
 
 ## Usage
  
-- Creates and Saves a new Unity3D script, with ChatGPT AI's power in UnityEditor. (for the code instruction decripted, with the name descripted)
+- Creates and Saves a new Unity3D script, with ChatGPT AI's power in UnityEditor. (for the code instruction descripted, with the name descripted)
 
 
 
@@ -19,7 +19,7 @@ https://user-images.githubusercontent.com/70747383/226208488-744e288c-9355-4148-
 
 3 - Configure the "OpenAI ChatGPT API key" (https://platform.openai.com/account/api-keys), model name (I used "gpt-3.5-turbo"), your new script's name and your new script's instructions from the "ChatGPT - Unity Code Generator" gameObject in scene.
 
-4 - Press "Generate Unity3D Code" button in the "ChatGPT - Unity Code Generator" gameobject's (it is an Editor button).
+4 - Press "Generate Unity3D Code" button in the "ChatGPT - Unity Code Generator" gameobject's (it's an "Editor" button).
 
 5 - Use the generated code from "Assets\ChatGPT Unity Code Generator\#Generated Unity Code" to your scenes.
 
