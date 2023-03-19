@@ -1,4 +1,6 @@
 # ChatGPT-Unity-3D-Code-Generator
+[<img src="Assets\ChatGPT Unity Code Generator\header.png" width="600px">](#readme)
+ 
 This repo is a "ChatGPT-Unity 3D Code Generator" application is working with Unity 3D.
 
 ## Usage
