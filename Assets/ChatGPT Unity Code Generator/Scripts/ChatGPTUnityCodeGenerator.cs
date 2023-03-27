@@ -1,5 +1,6 @@
 #nullable enable
 using System;
+using System.Collections;
 using Cysharp.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
@@ -57,7 +58,7 @@ public class ChatGPTUnityCodeGenerator : Singleton<ChatGPTUnityCodeGenerator>
         Debug.Log($"Script:\n{result.ResultMessage}");
         GenerateNewUnityScript(result.ResultMessage);
     }
-
+    
     private void GenerateNewUnityScript(string scriptContent)
     {
         if (!scriptContent.Contains("using UnityEngine;"))
@@ -76,8 +77,20 @@ public class ChatGPTUnityCodeGenerator : Singleton<ChatGPTUnityCodeGenerator>
         var gptClassName = newScript.Split("public class ")[1];
         var gptWords = gptClassName.Split(' ');
         newScript = newScript.Replace("public class " + gptWords[0], "public class " + newScriptName);
+
+        var path = "Assets/ChatGPT Unity Code Generator/#Generated Unity Code/" + newScriptName + ".cs";
+        File.WriteAllText(path, newScript);
+        AssetDatabase.ImportAsset(path);
+    }
+
+    [ContextMenu(nameof(AddGeneratedCodeToScene))]
+    public void AddGeneratedCodeToScene()
+    {
+        string typeName = newScriptName + ", Assembly-CSharp";
+        var type = Type.GetType(typeName);
         
-        File.WriteAllText("Assets/ChatGPT Unity Code Generator/#Generated Unity Code/" + newScriptName +".cs", newScript);
-        AssetDatabase.Refresh();
+        var go = new GameObject();
+        go.name = newScriptName;
+        go.AddComponent(type);
     }
 }

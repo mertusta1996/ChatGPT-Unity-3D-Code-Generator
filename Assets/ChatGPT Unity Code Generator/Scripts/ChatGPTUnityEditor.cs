@@ -13,5 +13,9 @@ public class ChatGPTUnityEditor : Editor
         {
             ChatGPTUnityCodeGenerator.Instance.GenerateUnity3DCode();
         }
+        if(GUILayout.Button("Add \"Generated Code\" to Scene"))
+        {
+            ChatGPTUnityCodeGenerator.Instance.AddGeneratedCodeToScene();
+        }
     }
 }
